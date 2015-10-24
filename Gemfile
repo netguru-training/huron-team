@@ -15,6 +15,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'omniauth-facebook'
 gem 'decent_exposure'
+gem "figaro"
 
 group :development do
   gem 'better_errors'
