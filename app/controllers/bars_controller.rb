@@ -1,5 +1,6 @@
 class BarsController < ApplicationController
-  before_filter :set_gon_vars
+  before_action :set_gon_vars
+  before_action :set_bar_address, only: [:create, :update]
   expose(:bars)
   expose(:bar, attributes: :bar_params)
   
@@ -19,11 +20,20 @@ class BarsController < ApplicationController
     end
   end
 
-	def bar_params
-		params.require(:bar).permit(:name, :lat, :lng)
-	end
+  private
 
   def set_gon_vars
     gon.bar = bar.persisted? ? bar : nil
   end
+
+  def set_bar_address
+    coords = bar.lat.to_s + ", " + bar.lng.to_s
+    geocoder = GoogleMapsGeocoder.new(coords)
+    bar.city = geocoder.city
+    bar.street = geocoder.formatted_address.split(", ").first
+  end
+
+	def bar_params
+		params.require(:bar).permit(:name, :lat, :lng)
+	end
 end
