@@ -14,6 +14,7 @@ gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
 gem 'omniauth-facebook'
+gem 'decent_exposure'
 
 group :development do
   gem 'better_errors'
