@@ -1,16 +1,18 @@
 class BarsController < ApplicationController
   expose(:bars)
-  expose(:bar)
-  
-  def index
-  end
+	expose(:bar, attributes: :bar_params)
 
-  def add
+	def create
+		if bar.save!
+			redirect_to bar_path
+		else
+			render 'new'
+		end
+	end
 
-  end
+	private
 
-  def edit
-
-  end
-
+	def bar_params
+		params.require(:bar).permit(:name, :lat, :lng)
+	end
 end
