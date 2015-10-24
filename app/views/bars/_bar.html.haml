@@ -1,3 +1,5 @@
 %tr
-  %td= bar.id
   %td= bar.name
+  %td
+    = link_to "Edit Bar", edit_bar_path(bar), class: 'btn btn-default'
+

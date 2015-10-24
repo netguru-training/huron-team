@@ -1,14 +1,3 @@
 %h1 Create bar
+= render 'form'
 
-= form_for bar do |f|
-  = f.label :name, 'Nazwa firmy'
-  = f.text_field :name
-  #map
-  = f.hidden_field :lat, id: 'map_lat'
-  = f.hidden_field :lng, id: 'map_lng'
-  = f.submit 'CREATE'
-
-:javascript
-  $(document).ready(function(){
-    gmap_form(null);
-  });

@@ -1,15 +1,2 @@
-%h1 Edit local
-
-= form_for bar do |f|
-  = f.label :name, 'local name'
-  = f.text_field :name
-  #map
-  = f.hidden_field :lat, id: 'map_lat'
-  = f.hidden_field :lng, id: 'map_lng'
-  = f.submit 'UPDATE'
-
-:javascript
-  $(document).ready(function(){
-    var local = #{bar.to_json}
-    gmap_form(local);
-  });
+%h1 Edit Bar
+= render 'form'
