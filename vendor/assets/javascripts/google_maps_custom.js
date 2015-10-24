@@ -14,7 +14,7 @@ function gmap_show(bar) {
           "width":  32,
           "height": 32
         },
-        "infowindow": "<b>" + bar.name + "</b> " + bar.address + ", " + bar.postal_code + " " + bar.city
+        "infowindow": "<b>" + bar.name + "</b> " + bar.street + ", " + bar.city
       }
     ]);
     handler.bounds.extendWith(markers);
@@ -36,7 +36,7 @@ function gmap_form(bar) {
             "width":  32,
             "height": 32
           },
-          "infowindow": "<b>" + bar.name + "</b> " + bar.address + ", " + bar.postal_code + " " + bar.city
+          "infowindow": "<b>" + bar.name + "</b> " + bar.street + ", " + bar.city
         }
       ]);
       handler.bounds.extendWith(markers);
