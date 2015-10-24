@@ -16,6 +16,8 @@ gem 'simple_form'
 gem 'omniauth-facebook'
 gem 'decent_exposure'
 gem "figaro"
+gem 'google_maps_geocoder'
+gem 'gmaps4rails'
 
 group :development do
   gem 'better_errors'
