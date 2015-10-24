@@ -1,4 +1,5 @@
 class BarsController < ApplicationController
+  before_filter :set_gon_vars
   expose(:bars)
   expose(:bar, attributes: :bar_params)
   
@@ -21,4 +22,8 @@ class BarsController < ApplicationController
 	def bar_params
 		params.require(:bar).permit(:name, :lat, :lng)
 	end
+
+  def set_gon_vars
+    gon.bar = bar.persisted? ? bar : nil
+  end
 end

@@ -6,9 +6,3 @@
   Street:
   = bar.lng
 #map
-
-:javascript
-  $(document).ready(function(){
-    var local = #{bar.to_json}    // pass ruby variable to javascript
-    gmap_show(local);    // init show map for local card (only print marker)
-  });

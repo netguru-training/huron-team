@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require form_map
+//= require show_map
+//= require google_maps_custom
 //= require_tree .

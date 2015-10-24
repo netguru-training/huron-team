@@ -18,6 +18,7 @@ gem 'decent_exposure'
 gem "figaro"
 gem 'google_maps_geocoder'
 gem 'gmaps4rails'
+gem 'gon'
 
 group :development do
   gem 'better_errors'

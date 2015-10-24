@@ -1,5 +1,7 @@
-%tr
-  %td= bar.name
-  %td
-    = link_to "Edit Bar", edit_bar_path(bar), class: 'btn btn-default'
-
+= form_for bar do |f|
+  = f.label :name, 'local name'
+  = f.text_field :name
+  #map
+  = f.hidden_field :lat, id: 'map_lat'
+  = f.hidden_field :lng, id: 'map_lng'
+  = f.submit
