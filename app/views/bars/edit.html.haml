@@ -1,6 +1,6 @@
 %h1 Edit local
 
-= form_for @local do |f|
+= form_for bar do |f|
   = f.label :name, 'local name'
   = f.text_field :name
   / map div
@@ -11,6 +11,6 @@
 
 :javascript
   $(document).ready(function(){
-    var local = #{@local.to_json}
+    var local = #{bar.to_json}
     gmap_form(local);    // form map for edit view (print marker and possibility of put newer)
   });

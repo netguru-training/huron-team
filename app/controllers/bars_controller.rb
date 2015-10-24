@@ -3,10 +3,18 @@ class BarsController < ApplicationController
 	expose(:bar, attributes: :bar_params)
 
 	def create
-		if bar.save!
-			redirect_to bar_path
+		if bar.save
+			redirect_to bar
 		else
 			render 'new'
+		end
+	end
+
+	def update
+		if bar.save
+			redirect_to bar
+		else
+			render 'edit'
 		end
 	end
 
