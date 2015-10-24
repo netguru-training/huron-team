@@ -12,11 +12,4 @@
     %li= fbeer.name
 - else
   %p No beers available :(
-#map{:style => "width: 550px; height: 350px;"}
-
-
-:javascript
-  $(document).ready(function(){
-    var local = #{bar.to_json}
-    gmap_show(local);
-  });
+#map
