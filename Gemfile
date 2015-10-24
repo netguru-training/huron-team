@@ -20,6 +20,8 @@ gem "figaro"
 gem 'google_maps_geocoder'
 gem 'gmaps4rails'
 gem 'gon'
+gem "rolify"
+gem "cancan"
 
 group :development do
   gem 'better_errors'
