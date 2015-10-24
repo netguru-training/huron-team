@@ -1,4 +1,6 @@
 class Bar < ActiveRecord::Base
-   validates :name, presence: true
+  has_and_belongs_to_many :beers
+  accepts_nested_attributes_for :beers
+  validates :name, presence: true
 end
 

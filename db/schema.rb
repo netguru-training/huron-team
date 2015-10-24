@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20151024140808) do
     t.string  "street"
   end
 
+  create_table "bars_beers", force: :cascade do |t|
+    t.integer "bar_id"
+    t.integer "beer_id"
+  end
+
+  add_index "bars_beers", ["bar_id"], name: "index_bars_beers_on_bar_id", using: :btree
+  add_index "bars_beers", ["beer_id"], name: "index_bars_beers_on_beer_id", using: :btree
+
   create_table "beers", force: :cascade do |t|
     t.string   "name"
     t.string   "kind"

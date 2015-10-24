@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require select2
 //= require bootstrap-sprockets
 //= require form_map
 //= require show_map

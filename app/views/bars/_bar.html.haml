@@ -1,7 +1,5 @@
-= form_for bar do |f|
-  = f.label :name, 'Bar name'
-  = f.text_field :name
-  #map
-  = f.hidden_field :lat, id: 'map_lat'
-  = f.hidden_field :lng, id: 'map_lng'
-  = f.submit
+%tr
+  %td= bar.name
+  %td
+    = link_to "Show Bar details", bar_path(bar), class: 'btn btn-default'
+    = link_to "Edit Bar", edit_bar_path(bar), class: 'btn btn-default'

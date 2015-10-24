@@ -22,6 +22,7 @@ gem 'gmaps4rails'
 gem 'gon'
 gem "rolify"
 gem "cancan"
+gem "select2-rails"
 
 group :development do
   gem 'better_errors'
