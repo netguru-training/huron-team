@@ -1,5 +1,5 @@
 %tr
-  %td= bar.name
+  %td= "#{bar.name} (#{bar.beers.count})"
   %td
     = link_to "Show Bar details", bar_path(bar), class: 'btn btn-default'
     = link_to "Edit Bar", edit_bar_path(bar), class: 'btn btn-default'

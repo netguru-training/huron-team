@@ -6,4 +6,7 @@
       %th Localname
       %th Action
   %tbody
-    = render bars
+    - if bars.present?
+      = render bars
+    - else
+      %h2 Excuse us. We are out of beer

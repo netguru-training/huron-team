@@ -1,9 +1,9 @@
 class BarsController < ApplicationController
-  before_action :set_gon_vars
-  expose(:bars)
+  # before_action :set_gon_vars
+  expose(:bars) { Bar.working_bars }
   expose(:bar, attributes: :bar_params)
   expose(:beers) { bars.beers }
-  
+
   def create
     if BarCreateWithGeolocation.new(bar).call!
       redirect_to bar, notice: "Bar has been created"
