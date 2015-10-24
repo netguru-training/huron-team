@@ -1,0 +1,15 @@
+%h1=@local.name
+%p
+  lat:
+  =@local.lat
+%p
+  lng:
+  =@local.lng
+/ map div
+#map{:style => "width: 550px; height: 350px;"}
+
+:javascript
+  $(document).ready(function(){
+    var local = #{@local.to_json}    // pass ruby variable to javascript
+    gmap_show(local);    // init show map for local card (only print marker)
+  });
