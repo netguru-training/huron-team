@@ -13,6 +13,7 @@ gem 'devise'
 gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
+gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'decent_exposure'
 gem "figaro"
