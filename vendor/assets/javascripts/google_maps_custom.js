@@ -10,7 +10,7 @@ function gmap_show(bar) {
         "lat": bar.lat,    // coordinates from parameter bar
         "lng": bar.lng,
         "picture": {    // setup marker icon
-          "url": 'http://www.planet-action.org/img/2009/interieur/icons/orange-dot.png',
+          "url": 'http://megaicons.net/static/img/icons_sizes/258/972/32/beer-icon.png',
           "width":  32,
           "height": 32
         },
@@ -32,7 +32,7 @@ function gmap_form(bar) {
           "lat": bar.lat,
           "lng": bar.lng,
           "picture": {
-            "url": 'http://www.planet-action.org/img/2009/interieur/icons/orange-dot.png',
+            "url": 'http://megaicons.net/static/img/icons_sizes/258/972/32/beer-icon.png',
             "width":  32,
             "height": 32
           },
