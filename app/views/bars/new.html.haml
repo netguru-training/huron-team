@@ -3,13 +3,12 @@
 = form_for bar do |f|
   = f.label :name, 'Nazwa firmy'
   = f.text_field :name
-  / map div
-  #map{:style => "width: 550px; height: 350px;"}
+  #map
   = f.hidden_field :lat, id: 'map_lat'
   = f.hidden_field :lng, id: 'map_lng'
   = f.submit 'CREATE'
 
 :javascript
   $(document).ready(function(){
-    gmap_form(null);    // form map for new view (print nothing with possibility of put marker)
+    gmap_form(null);
   });
