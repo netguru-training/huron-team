@@ -8,7 +8,7 @@ RSpec.describe BarDecorator do
       expect(bar.street_and_city).to eq("heheszek street Warsaw")  
     end
   end
-
+  
   describe "#name with count" do
     let!(:bar) { create(:bar, name: "Adam").decorate }
 
