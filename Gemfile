@@ -21,8 +21,8 @@ gem 'google_maps_geocoder'
 gem 'gmaps4rails'
 gem 'gon'
 gem "rolify"
-gem "cancan"
 gem "select2-rails"
+gem "cancancan"
 
 group :development do
   gem 'better_errors'
