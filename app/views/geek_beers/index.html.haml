@@ -1,0 +1,12 @@
+%h1 All bars
+
+%table.table.table-condensed
+  %tr
+    %th Name
+    %th Address
+    %th
+  - bars.each do |bar|
+    %tr
+      %td= "#{bar.name} (#{bar.beers.count})"
+      %td= "#{bar.street} #{bar.city}"
+      %td= link_to 'Show', geek_beer_path(bar)

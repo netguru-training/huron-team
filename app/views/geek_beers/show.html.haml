@@ -1,0 +1,20 @@
+%h1= bar.name
+%p
+  City:
+  = bar.city
+%p
+  Street:
+  = bar.street
+%ul
+- if bar.beers.present?
+  %table.table-condensed
+    %tr
+      %th Available beers
+    - bar.beers.each do |fbeer|
+      %tr
+        %td= fbeer.name
+- else
+  %p No beers available :(
+#map
+%p
+  = link_to 'All bars', geek_beers_path, class: 'btn btn-default'
