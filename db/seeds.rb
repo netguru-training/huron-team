@@ -1,9 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-user = CreateAdminService.new.call
-puts 'CREATED ADMIN USER: ' << user.email
+beer_names = ["Guiness", "Smithwicks", "Imperial Stout Porter", "Frater", "Pilzner Urquell", "Carlsberg"]
+beer_kinds = %w[Stout Ale Porter Pszeniczne Pilzner Lager]
+
+beer_names.each_with_index do |bn, i|
+  Beer.where(name: bn).first_or_create do |b|
+    b.kind = beer_kinds[i]
+  end
+end
+
+bar_names = ["Kontynuacja", "Biała Małpa", "Złoty Osioł", "Niebo", "Kocioł", "Browariat"]
+bar_names.each do |bn|
+  Bar.where(name: bn).first_or_create do |b|
+    b.lat = 50.0 + rand()
+    b.lng = 19.0 + rand()
+    BarCreateWithGeolocation.new(b).call!
+  end
+end
