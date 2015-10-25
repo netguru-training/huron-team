@@ -1,6 +1,6 @@
 class GeekBeersController < ApplicationController
   before_action :set_gon_vars
-  expose_decorated(:bars) { working_bars.by_city(params[:city]) }
+  expose_decorated(:bars) { working_bars }
   expose(:bar)
   expose(:cities_names) { fetch_cities_names }
 
