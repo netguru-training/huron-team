@@ -1,5 +1,5 @@
 beer_names = ["Guiness", "Smithwicks", "Imperial Stout Porter", "Frater", "Pilzner Urquell", "Carlsberg"]
-beer_kinds = %w[Stout Ale Porter Pszeniczne Pilzner Lager]
+beer_kinds = %w(Stout Ale Porter Pszeniczne Pilzner Lager)
 
 beer_names.each_with_index do |bn, i|
   Beer.where(name: bn).first_or_create do |b|
@@ -16,5 +16,12 @@ bar_names.each do |bn|
     bar.lng = 19.0 + rand
     bar.beers << beers.all.sample(rand(1..4))
     BarCreateWithGeolocation.new(bar).call!
+  end
+end
+
+20.times do |i|
+  User.where(email: Faker::Internet.email).first_or_create do |user|
+    user.name = Faker::Name.name
+    user.add_role(User::ROLES.sample)
   end
 end
