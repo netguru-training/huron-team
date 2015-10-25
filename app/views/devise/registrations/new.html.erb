@@ -18,6 +18,12 @@
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
     </div>
-     <%= f.submit 'Sign up', :class => 'button right' %>
+    <div class="form-group">
+      <%= f.label 'Beer Geek' %>
+      <%= f.radio_button :is_geek, '1',  checked: true %>
+      <%= f.label 'Bar Owner' %>
+      <%= f.radio_button :is_geek, '0'  %>
+    </div>
+    <%= f.submit 'Sign up', :class => 'button right' %>
   <% end %>
 </div>

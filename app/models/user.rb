@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   ROLES = %w[bar_owner beer_geek]
 
   rolify
+  attr_accessor :is_geek
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
