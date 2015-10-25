@@ -29,7 +29,7 @@ class BarsController < ApplicationController
 
 	def bar_params
 		p = params.require(:bar).permit(:name, :lat, :lng) 
-    beers_ids = params[:bar][:beers].select { |x| x.present? }
+    beers_ids = params[:bar][:beer_ids].select { |x| x.present? }
     p.deep_merge({ 'beer_ids' => beers_ids })
 	end
 end
