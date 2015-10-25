@@ -19,9 +19,22 @@ bar_names.each do |bn|
   end
 end
 
+User.where(email: 'owner@example.com').first_or_create do |owner|
+  owner.name = 'Jan Kowalski'
+  owner.password = 'adminadmin'
+  owner.add_role(User::ROLES.first)
+end
+
+User.where(email: 'geek@user.com').first_or_create do |geek|
+  geek.name = "John Doe"
+  geek.password = "foo2bar4"
+  geek.add_role(User::ROLES.last)
+end
+
 20.times do |i|
   User.where(email: Faker::Internet.email).first_or_create do |user|
     user.name = Faker::Name.name
+    user.password = Faker::Internet.password
     user.add_role(User::ROLES.sample)
   end
 end
