@@ -23,10 +23,16 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     stored_location_for(resource) ||
-      if resource.is_a?(User) && resource.has_role?("bar_owner")
-        bars_url
-      else
-        super
-      end
+    if resource.is_a?(User) && resource.has_role?("bar_owner")
+      bars_url
+    else
+      super
     end
+  end
+
+  protected
+
+  def set_gon_vars
+    gon.bar = bar.persisted? ? bar : nil
+  end
 end

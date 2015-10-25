@@ -9,10 +9,12 @@
 - if bar.beers.present?
   %table.table-condensed
     %tr
-      %th Available beers
+      %th Beer name:
+      %th Your rate
     - bar.beers.each do |fbeer|
       %tr
         %td= fbeer.name
+        %td= rating_for fbeer, "taste", disable_after_rate: true, imdb_avg: true
 - else
   %p No beers available :(
 #map

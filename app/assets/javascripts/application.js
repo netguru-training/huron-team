@@ -17,4 +17,6 @@
 //= require form_map
 //= require show_map
 //= require google_maps_custom
+//= require jquery.raty
+//= require ratyrate
 //= require_tree .

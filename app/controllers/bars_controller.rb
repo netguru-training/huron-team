@@ -25,12 +25,8 @@ class BarsController < ApplicationController
 
   private
 
-  def set_gon_vars
-    gon.bar = bar.persisted? ? bar : nil
-  end
-
   def bar_params
-    p = params.require(:bar).permit(:name, :lat, :lng) 
+    p = params.require(:bar).permit(:name, :lat, :lng)
     beers_ids = params[:bar][:beer_ids].select { |x| x.present? }
 
     p.deep_merge({ 'beer_ids' => beers_ids })

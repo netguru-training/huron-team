@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
+  ratyrate_rater
 
   # scope :owners, -> { User.select('bars.*').joins(:beers).group('bars.id').having("count(beer_id)>0")} 
 

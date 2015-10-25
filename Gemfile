@@ -23,6 +23,7 @@ gem 'gon'
 gem "rolify"
 gem "select2-rails"
 gem "cancancan"
+gem "ratyrate"
 
 group :development do
   gem 'better_errors'
