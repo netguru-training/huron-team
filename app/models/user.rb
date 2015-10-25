@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  ROLES = %w[bar_owner beer_geek]
+
   rolify
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
