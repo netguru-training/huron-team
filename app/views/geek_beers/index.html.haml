@@ -7,6 +7,6 @@
     %th
   - bars.each do |bar|
     %tr
-      %td= "#{bar.name} (#{bar.beers.count})"
-      %td= "#{bar.street} #{bar.city}"
+      %td= bar.name_with_count
+      %td= bar.street_and_city
       %td= link_to 'Show', geek_beer_path(bar)
