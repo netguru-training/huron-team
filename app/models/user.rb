@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
   ROLES = %w[bar_owner beer_geek]
-
   rolify
   attr_accessor :is_geek
 
