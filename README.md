@@ -29,20 +29,6 @@ Be a part of our AWESOME rails app that allows people to register own Pubs with 
 - [Norbert Nytko](https://github.com/norbertnytko)
 - [Robert Kuśmirek](https://github.com/qsmir)
 
-### :sparkles: Stack
-
-| Name |  Version |
-| :--: | :---: |
-| [Ruby](https://www.ruby-lang.org) | |
-| [Ruby on Rails](http://www.rubyonrails.org/) | |
-| [PostgreSQL](http://www.postgresql.org/) | |
-
-## :hammer: Setup
-
-- download repo,
-- run `bundle install`
-- ...
-
 # :camera: Screenshots
 ![alt tag](http://i.imgur.com/vDbiKGW.png)
 ![alt tag](http://i.imgur.com/ffmCMdG.png)
