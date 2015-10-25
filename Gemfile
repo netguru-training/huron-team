@@ -26,6 +26,7 @@ gem "cancancan"
 gem "ratyrate"
 gem "draper"
 gem 'decent_decoration'
+gem 'faker'
 
 group :development do
   gem 'better_errors'
@@ -38,7 +39,6 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'factory_girl_rails'
-  gem 'faker'
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-rescue'

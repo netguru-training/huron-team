@@ -29,10 +29,9 @@ end
 
 beers = Beer.all
 
-bar_names = ["Kontynuacja", "Biała Małpa", "Złoty Osioł", "Niebo", "Kocioł", "Browariat"]
 owners = User.all.select { |x| x.has_role?(:bar_owner) }.map(&:id)
-bar_names.each do |bn|
-  Bar.where(name: bn).first_or_create do |bar|
+100.times do |b|
+  Bar.where(name: Faker::Company.name).first_or_create do |bar|
     bar.lat = 50.0 + rand
     bar.lng = 19.0 + rand
     bar.beers << beers.all.sample(rand(1..4))
