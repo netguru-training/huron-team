@@ -27,6 +27,6 @@ class BarsController < ApplicationController
   end
 
 	def bar_params
-		params.require(:bar).permit(:name, :lat, :lng, beer_ids: []) 
+		params.require(:bar).permit(:name, :lat, :lng, beer_ids: [])
 	end
 end

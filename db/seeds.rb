@@ -7,11 +7,14 @@ beer_names.each_with_index do |bn, i|
   end
 end
 
+beers = Beer.all
+
 bar_names = ["Kontynuacja", "Biała Małpa", "Złoty Osioł", "Niebo", "Kocioł", "Browariat"]
 bar_names.each do |bn|
-  Bar.where(name: bn).first_or_create do |b|
-    b.lat = 50.0 + rand()
-    b.lng = 19.0 + rand()
-    BarCreateWithGeolocation.new(b).call!
+  Bar.where(name: bn).first_or_create do |bar|
+    bar.lat = 50.0 + rand
+    bar.lng = 19.0 + rand
+    bar.beers << beers.all.sample(rand(1..4))
+    BarCreateWithGeolocation.new(bar).call!
   end
 end
