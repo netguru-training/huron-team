@@ -6,7 +6,7 @@ class BarsController < ApplicationController
 
 
   def create
-    if BarCreateWithGeolocation.new(bar).call!
+    if BarCreateWithGeolocation.new(bar,current_user).call!
       redirect_to bar, notice: "Bar has been created"
     else
       render :new
@@ -14,7 +14,7 @@ class BarsController < ApplicationController
   end
 
   def update
-    if BarCreateWithGeolocation.new(bar).call!
+    if BarCreateWithGeolocation.new(bar,current_user).call!
       redirect_to bar, notice: "Bar has been updated"
     else
       render :edit
