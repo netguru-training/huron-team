@@ -1,5 +1,4 @@
 class GeekBeersController < ApplicationController
-  expose(:bars)
+  expose(:bars) { Bar.working_bars }
   expose(:bar)
-  expose(:beers) { bar.beers }
 end
