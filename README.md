@@ -20,7 +20,7 @@
 
 description here & screenshot
 #### :information_source: App description
-Be a part of our AWESOME rails app that allows people to register own Pubs with Google maps. App allows to rate beers that the current Pub has and informs about the average beer rate by our Community.  
+Be a part of our AWESOME rails app that allows people to register own Pubs with Google maps. App allows to rate beers that the current Pub has and informs about the average beer rate by our Community.
 
 
 #### :information_source: Crew
@@ -28,3 +28,21 @@ Be a part of our AWESOME rails app that allows people to register own Pubs with 
 - [Kamil Obst](https://github.com/Kadilak)
 - [Norbert Nytko](https://github.com/norbertnytko)
 - [Robert Kuśmirek](https://github.com/qsmir)
+
+### :sparkles: Stack
+
+| Name |  Version |
+| :--: | :---: |
+| [Ruby](https://www.ruby-lang.org) | |
+| [Ruby on Rails](http://www.rubyonrails.org/) | |
+| [PostgreSQL](http://www.postgresql.org/) | |
+
+## :hammer: Setup
+
+- download repo,
+- run `bundle install`
+- ...
+
+# :camera: Screenshots
+![alt tag](http://i.imgur.com/vDbiKGW.png)
+![alt tag](http://i.imgur.com/ffmCMdG.png)
