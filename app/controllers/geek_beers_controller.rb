@@ -2,7 +2,7 @@ class GeekBeersController < ApplicationController
   before_action :set_gon_vars
   expose_decorated(:bars) { get_bars }
   expose(:bar)
-  expose(:cities_names) { fetch_cities_names }
+  expose(:cities_names) { fetch_cities }
 
   private
 

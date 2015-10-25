@@ -5,7 +5,7 @@
     = form_tag geek_beers_path, method: 'get' do
       %h3 Search for bars in your city:
       %p
-        = select_tag 'search_city', options_for_select(["Katowice", "Kraków"])
+        = select_tag 'search_city', options_for_select(cities_names)
         = submit_tag 'Find bars', name: nil
   %table.table.table-condensed
     %tr
