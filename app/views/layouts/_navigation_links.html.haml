@@ -1,5 +1,10 @@
 - if user_signed_in?
   %li
+    - if current_user && current_user.has_role?("bar_owner")
+      = link_to 'Home', bars_path, class: 'navbar-brand'
+    - else
+      = link_to 'Home', root_path, class: 'navbar-brand'
+  %li
     = link_to 'Edit account', edit_user_registration_path
   %li
     = link_to 'Sign out', destroy_user_session_path, :method=>'delete'
