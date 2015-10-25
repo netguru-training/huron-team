@@ -23,12 +23,9 @@ gem 'gon'
 gem "rolify"
 gem "select2-rails"
 gem "cancancan"
-<<<<<<< HEAD
 gem "ratyrate"
-=======
 gem "draper"
 gem 'decent_decoration'
->>>>>>> Create first decorator rspec
 
 group :development do
   gem 'better_errors'
