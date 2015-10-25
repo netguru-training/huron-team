@@ -1,12 +1,19 @@
-%h1 All bars
-
-%table.table.table-condensed
-  %tr
-    %th Name
-    %th Address
-    %th
-  - bars.each do |bar|
+.row
+  .col-lg-8
+    %h1 All bars
+  .col-md-4
+    = form_tag geek_beers_path do
+      %h3 Search for bars in your city:
+      %p
+        = text_field :search_city, params[:search_city]
+        = submit_tag 'Find bars', name: nil
+  %table.table.table-condensed
     %tr
-      %td= bar.name_with_count
-      %td= bar.street_and_city
-      %td= link_to 'Show', geek_beer_path(bar)
+      %th Name
+      %th Address
+      %th
+    - bars.each do |bar|
+      %tr
+        %td= bar.name_with_count
+        %td= bar.street_and_city
+        %td= link_to 'Show', geek_beer_path(bar)
