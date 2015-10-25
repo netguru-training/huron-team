@@ -2,10 +2,10 @@
   .col-lg-8
     %h1 All bars
   .col-md-4
-    = form_tag geek_beers_path do
+    = form_tag geek_beers_path, method: 'get' do
       %h3 Search for bars in your city:
       %p
-        = text_field :search_city, params[:search_city]
+        = select_tag 'search_city', options_for_select(["Katowice", "Kraków"])
         = submit_tag 'Find bars', name: nil
   %table.table.table-condensed
     %tr
