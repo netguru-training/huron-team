@@ -307,6 +307,7 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   pg
+  pry
   pry-rails
   pry-rescue
   quiet_assets
