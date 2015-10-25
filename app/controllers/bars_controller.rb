@@ -1,8 +1,9 @@
 class BarsController < ApplicationController
-  # before_action :set_gon_vars
-  expose(:bars) { Bar.working_bars }
+  before_action :set_gon_vars
+
+  expose(:bars)
   expose(:bar, attributes: :bar_params)
-  expose(:beers) { bars.beers }
+
 
   def create
     if BarCreateWithGeolocation.new(bar).call!
@@ -27,6 +28,8 @@ class BarsController < ApplicationController
   end
 
 	def bar_params
-		params.require(:bar).permit(:name, :lat, :lng, beer_ids: [])
+		p = params.require(:bar).permit(:name, :lat, :lng) 
+    beers_ids = params[:bar][:beers].select { |x| x.present? }
+    p.deep_merge({ 'beer_ids' => beers_ids })
 	end
 end
